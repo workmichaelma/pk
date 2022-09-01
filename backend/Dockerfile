@@ -26,6 +26,6 @@ COPY . .
 
 RUN yarn build
 
-EXPOSE 1337
+EXPOSE 1000
 
 CMD yarn start
