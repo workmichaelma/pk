@@ -1,0 +1,22 @@
+version: '3'
+services:
+  bk-backend:
+    build: './backend'
+    environment:
+      APP_KEYS: 'vCdhXHlys8woRDwnBwR5qQ==,OnxTpbuY/1VdvnAsG2JIHA==,TcqVxEUvNjtS30ndh4EN1Q==,PXhVM4CBZS6Z/uA85nlYkQ=='
+      API_TOKEN_SALT: 'XUSyW4t6Wzg8TzUKWMFPKQ=='
+      ADMIN_JWT_SECRET: 'GmziefmfmWtMTfM/F7g05A=='
+      JWT_SECRET: 'jfDgNRoWhQDAEqcitxjw8Q=='
+      NODE_ENV: ${NODE_ENV}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_SSL: ${DATABASE_SSL}
+    volumes:
+      - ./backend:/opt/backend
+    ports:
+      - '1000:1337'
+    env_file:
+      - ./.env
