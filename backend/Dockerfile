@@ -26,6 +26,6 @@ COPY . .
 
 RUN yarn build
 
-EXPOSE 1000
+EXPOSE ${PORT}
 
 CMD yarn start
