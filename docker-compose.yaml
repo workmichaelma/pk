@@ -3,6 +3,8 @@ services:
   bk-backend:
     build: './backend'
     environment:
+      HOST: 'http://128.199.246.210/'
+      PORT: 1000
       APP_KEYS: 'vCdhXHlys8woRDwnBwR5qQ==,OnxTpbuY/1VdvnAsG2JIHA==,TcqVxEUvNjtS30ndh4EN1Q==,PXhVM4CBZS6Z/uA85nlYkQ=='
       API_TOKEN_SALT: 'XUSyW4t6Wzg8TzUKWMFPKQ=='
       ADMIN_JWT_SECRET: 'GmziefmfmWtMTfM/F7g05A=='
